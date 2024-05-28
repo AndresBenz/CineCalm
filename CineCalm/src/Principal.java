@@ -3,6 +3,8 @@ import com.cinemacalm.catalogo.calculos.FiltroRecomendaciones;
 import com.cinemacalm.catalogo.modelos.Pelicula;
 import com.cinemacalm.catalogo.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Pelicula miPelicula = new Pelicula();
@@ -36,6 +38,21 @@ public class Principal {
 
         FiltroRecomendaciones filtroRecomendaciones = new FiltroRecomendaciones();
         filtroRecomendaciones.filtra(miPelicula);
+
+        var peliculaBruno = new Pelicula();//var hace una referencia al tipo que es osea a Pelicula() en este caso
+        peliculaBruno.setNombre("Señor de los anillos ");
+        peliculaBruno.setDuracionEnMinutos(100);
+        peliculaBruno.setFechaDeLanzamiento(2001);
+
+
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(miPelicula);
+        listaDePeliculas.add(peliculaBruno);
+
+        System.out.println("Tamaño de la lista "+ listaDePeliculas.size());//size tamaño
+        System.out.println("La primera pelicula es "+ listaDePeliculas.get(0).getNombre());
+
+        System.out.println(listaDePeliculas);
 
     }
 }
