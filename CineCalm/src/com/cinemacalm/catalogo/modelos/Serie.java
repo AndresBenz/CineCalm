@@ -1,7 +1,9 @@
 package com.cinemacalm.catalogo.modelos;
 
-public class Serie {
+public class Serie extends Titulo{
     int temporadas;
+    int episodios;
+    int minutosPorEpisodios;
 
     public int getTemporadas() {
         return temporadas;
@@ -20,13 +22,12 @@ public class Serie {
     }
 
     public int getMinutosPorEpisodios() {
-        return minutosPorEpisodios;
+        return temporadas * episodios * minutosPorEpisodios;
     }
 
     public void setMinutosPorEpisodios(int minutosPorEpisodios) {
         this.minutosPorEpisodios = minutosPorEpisodios;
     }
 
-    int episodios;
-    int minutosPorEpisodios;
+
 }
